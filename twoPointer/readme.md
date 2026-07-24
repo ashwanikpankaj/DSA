@@ -1,0 +1,1 @@
+Two Pointers is about safely discarding impossible or unnecessary possibilities.
