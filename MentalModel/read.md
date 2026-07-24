@@ -8,4 +8,4 @@ What information do I need to retrieve quickly?
 
 Rule #3
 
-Choose the simplest data structure that provides that information.
+Choose the simplest data structure that provides that information. ->
