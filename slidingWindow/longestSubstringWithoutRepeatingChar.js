@@ -34,3 +34,31 @@ function findLongestSubstring(str){
 }
 
 console.log(findLongestSubstring(s))
+
+
+
+function longestSubstringOptimized(str) {
+    const lastSeen = new Map();
+
+    let left = 0;
+    let longest = 0;
+
+    for (let right = 0; right < str.length; right++) {
+
+        const ch = str[right];
+
+        // If we've seen this character inside the current window,
+        // move left just after its previous occurrence.
+        if (lastSeen.has(ch)) {
+            left = Math.max(left, lastSeen.get(ch) + 1);
+        }
+
+        // Update the answer
+        longest = Math.max(longest, right - left + 1);
+
+        // Remember the latest index of this character
+        lastSeen.set(ch, right);
+    }
+
+    return longest;
+}
